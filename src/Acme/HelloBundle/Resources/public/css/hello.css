@@ -1,0 +1,8 @@
+.flash-notice {
+    background-color: lightyellow;
+    border: 1px solid gold;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    width: 200px;
+}
