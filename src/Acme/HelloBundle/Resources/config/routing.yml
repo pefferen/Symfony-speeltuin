@@ -1,3 +1,7 @@
 hello:
     pattern:  /hello/{name}
     defaults: { _controller: AcmeHelloBundle:Hello:index }
+
+greatings:
+    pattern: /greetings/{name}
+    defaults: { _controller: AcmeHelloBundle:Greetings:index }
