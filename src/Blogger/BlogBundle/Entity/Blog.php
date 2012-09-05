@@ -11,6 +11,20 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Blog
 {
+    public function __construct()
+    {
+        $this->setCreated(new \DateTime());
+        $this->setUpdated(new \DateTime());
+    }
+
+    /**
+     * @ORM\preUpdate
+     */
+    public function setUpdatedValue()
+    {
+        $this->setUpdated(new \DateTime());
+    }
+    
     /**
      * @ORM\Id
      * @ORM\Column(type="integer")
