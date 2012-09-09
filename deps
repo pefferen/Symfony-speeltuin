@@ -67,5 +67,13 @@
 
 [DoctrineFixturesBundle]
     git=http://github.com/doctrine/DoctrineFixturesBundle.git
-    target=/bundles/Doctrine/Bundle/DoctrineFixturesBundle
+    target=/bundles/Symfony/Bundle/DoctrineFixturesBundle
+    version=origin/2.0
+
+[doctrine-migrations]
+    git=http://github.com/doctrine/migrations.git
+
+[DoctrineMigrationsBundle]
+    git=http://github.com/doctrine/DoctrineMigrationsBundle.git
+    target=/bundles/Symfony/Bundle/DoctrineMigrationsBundle
     version=origin/2.0
