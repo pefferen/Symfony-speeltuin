@@ -46,7 +46,8 @@ Class CommentController extends Controller
 
       // de syntax van de generateUrl functie is niet zoals ik zou verwachten maar klopt wel
       return $this->redirect($this->generateUrl('BloggerBlogBundle_blog_show', array(
-                'id' => $comment->getBlog()->getId())) .
+                'id'   => $comment->getBlog()->getId(),
+                'slug' => $comment->getBlog()->getSlug())) .
                 '#comment-' . $comment->getId()
             );
     }
