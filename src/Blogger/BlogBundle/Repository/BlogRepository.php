@@ -1,6 +1,6 @@
 <?php
 
-namespace Blogger\blogBundle\Repository;
+namespace Blogger\BlogBundle\Repository;
 
 use Doctrine\ORM\EntityRepository;
 
@@ -38,8 +38,8 @@ class BlogRepository extends EntityRepository
     {
       $tags = array_merge(explode(",", $blogTag['tags']), $tags);
     }
-
-    foreach ($tags as $tag) 
+    
+    foreach ($tags as &$tag) 
     {
       $tag = trim($tag);
     }
@@ -67,7 +67,7 @@ class BlogRepository extends EntityRepository
 
     // Max of 5 weights
     $multiplier = ($max > 5) ? 5 / $max : 1;
-    foreach ($tagWeights as $tag) 
+    foreach ($tagWeights as &$tag) 
     {
       $tag = ceil($tag * $multiplier);
     }

@@ -4,4 +4,6 @@
 /app/logs/*
 /vendor/
 /app/config/parameters.ini
+/app/phpunit.xml
+/phpunit-report
 *.swp
